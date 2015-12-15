@@ -32,17 +32,6 @@ angular.
         controller: 'NewsCtrl'
       })
 
-      .state('dash.newsList', {
-        url:'/news',
-        views: {
-          'tab-news-list': {
-            templateUrl: '',
-            controller: ''
-          }
-        }
-      })
-
-
       ;
 
       $urlRouterProvider.otherwise('/dash');
