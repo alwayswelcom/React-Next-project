@@ -41,9 +41,7 @@ angular.
       })
       ;
 
-      $urlRouterProvider.otherwise('/dash');
+      $urlRouterProvider.otherwise('/news');
 
 
     });
-
-console.log('State Loaded');
