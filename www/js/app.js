@@ -33,7 +33,7 @@ angular.
       })
 
       .state('dash.news', {
-        url: '/news',
+        url: 'dash/news',
         views: {
           'menuContent': {
             templateUrl: 'templates/news-list.html'
