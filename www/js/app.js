@@ -28,9 +28,17 @@ angular.
       .state('dash', {
         url: '/dash',
         templateUrl: 'templates/menu.html',
-        controller: 'NewsCtrl'
+        controller: 'AppCtrl'
       })
 
+      .state('news', {
+        url: '/news',
+        views: {
+          'MenuContent': {
+            templateUrl: 'templates/news-list.html'
+          }
+        }
+      })
       ;
 
       $urlRouterProvider.otherwise('/dash');
