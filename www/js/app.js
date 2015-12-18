@@ -35,7 +35,8 @@ angular.
         url: '/news',
         views: {
           'menuContent': {
-            templateUrl: 'templates/news-list.html'
+            templateUrl: 'templates/news-list.html',
+            controller: 'NewsListCtrl'
           }
         }
       })
