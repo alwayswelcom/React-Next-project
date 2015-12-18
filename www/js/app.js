@@ -27,13 +27,12 @@ angular.
 
       .state('dash', {
         url: '/dash',
-        abstract: true,
         templateUrl: 'templates/menu.html',
         controller: 'AppCtrl'
       })
 
       .state('dash.news', {
-        url: 'dash/news',
+        url: '/news',
         views: {
           'menuContent': {
             templateUrl: 'templates/news-list.html'
