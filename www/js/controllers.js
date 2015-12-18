@@ -1,5 +1,9 @@
 angular.module('starter.controllers', [])
 
-  .controller('NewsCtrl', function($scope){
-    $scope.name = 'Ali';
-  });
+  .controller('AppCtrl', function($scope){
+
+  })
+  .controller('NewsListCtrl', function($scope){
+
+  })
+  ;
