@@ -4,6 +4,6 @@ angular.module('starter.controllers', [])
 
   })
   .controller('NewsListCtrl', function($scope){
-
+    $scope.news = "this is news";
   })
   ;
