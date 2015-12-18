@@ -27,7 +27,6 @@ angular.
 
       .state('dash', {
         url: '/dash',
-        abstract: true,
         templateUrl: 'templates/menu.html',
         controller: 'NewsCtrl'
       })
