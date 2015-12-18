@@ -41,5 +41,5 @@ angular.
       })
       ;
 
-      $urlRouterProvider.otherwise('/dash');
+      $urlRouterProvider.otherwise('/dash/news');
     });
