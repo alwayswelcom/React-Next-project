@@ -1,9 +1,12 @@
-angular.module('starter.controllers', [])
+(function(ng){
+  "use strict";
+  ng
+  .module('myapp.controllers', [])
 
-  .controller('AppCtrl', function($scope){
+  .controller('AppCtrl', ['$scope',($scope) => {
 
-  })
-  .controller('NewsListCtrl', function($scope){
+  }])
+  .controller('NewsListCtrl', ['$scope',($scope) => {
     $scope.news = [
     {
       id: 1,
@@ -32,5 +35,7 @@ angular.module('starter.controllers', [])
       'long_desc': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, cumque, provident, laboriosam obcaecati optio rem aspernatur enim exercitationem in hic molestias dignissimos quibusdam placeat totam pariatur expedita sint deleniti saepe aliquam quisquam itaque ex natus unde labore et repellat incidunt voluptatibus! Reiciendis, quaerat distinctio voluptate. Officiis culpa earum dolores sequi.'
     }
     ];
-  })
+  }])
   ;
+
+})(angular);
