@@ -1,7 +1,7 @@
 <ion-view view-title="Latest News">
   <ion-content class="">
     <div class="list">
-      <ion-item class="" ng-repeat="n in news" href="#/dash/news/{{}}">
+      <ion-item class="" ng-repeat="n in news" href="#/dash/news/{{n.id}}">
         <div class="card">
           <div class="item item-divider">
             {{n.title}} {{n.id}}

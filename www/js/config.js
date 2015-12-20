@@ -39,6 +39,15 @@
             }
           }
         })
+        .state('dash.news-item', {
+          url: '/news/:newsID',
+          views: {
+            'menuContent:': {
+              templateUrl: 'templates/news-item.html',
+              controller: 'NewsItemCtrl'
+            }
+          }
+        })
         ;
 
         $urlRouterProvider.otherwise('/dash/news');
