@@ -18,13 +18,11 @@
     <!-- your app's js -->
     <script src="js/index.js"></script>
     <script src="js/config.js"></script>
-    <!--<script src="js/services.js"></script>-->
-    <script src="js/pages/index.js"></script>
-    <script src="js/pages/app.js"></script>
-    <script src="js/pages/newslist.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
 
   </head>
-  <body ng-app="myapp">
+  <body ng-app="myapp" ng-strict-di="true">
     <ion-nav-view name="root"></ion-nav-view>
   </body>
 </html>
