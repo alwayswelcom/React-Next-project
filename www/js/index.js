@@ -5,7 +5,7 @@
   .module('myapp',[
     'ionic',
     'myapp.config',
-    'myapp.controllers',
+    'myapp.pages',
     ])
   ;
 })(angular);
