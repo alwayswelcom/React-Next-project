@@ -6,6 +6,7 @@
     'ionic',
     'myapp.config',
     'myapp.controllers',
+    'myapp.services',
     ])
   ;
 })(angular);
