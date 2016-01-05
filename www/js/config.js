@@ -22,6 +22,7 @@
 
         .state('dash', {
           url: '/dash',
+          abstract: true,
           views: {
             'root': {
               templateUrl: 'templates/menu.html',
