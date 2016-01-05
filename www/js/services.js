@@ -36,12 +36,12 @@
         all: function() {
           return news;
         },
-        remove: function(chat) {
-          news.splice(news.indexOf(chat), 1);
+        remove: function(singleNews) {
+          news.splice(news.indexOf(singleNews), 1);
         },
-        get: function(chatId) {
+        get: function(singleNewsId) {
           for (var i = 0; i < news.length; i++) {
-            if (news[i].id === parseInt(chatId)) {
+            if (news[i].id === parseInt(singleNewsId) ) {
               return news[i];
             }
           }

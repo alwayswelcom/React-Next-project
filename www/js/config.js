@@ -17,7 +17,7 @@
         });
       }])
 
-      .config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) =>{
+      .config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
         $stateProvider
 
         .state('dash', {
@@ -40,8 +40,9 @@
             }
           }
         })
+
         .state('dash.news-item', {
-          url: '/news/:newsID',
+          url: '/news/:singleNewsId',
           views: {
             'menuContent:': {
               templateUrl: 'templates/news-item.html',
