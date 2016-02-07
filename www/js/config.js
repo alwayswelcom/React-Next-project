@@ -44,7 +44,7 @@
         .state('dash.news-item', {
           url: '/news/:singleNewsId',
           views: {
-            'menuContent:': {
+            'menuContent': {
               templateUrl: 'templates/news-item.html',
               controller: 'NewsItemCtrl'
             }
