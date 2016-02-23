@@ -1,58 +1,58 @@
 (function(ng){
   'use strict';
   ng.
-  module('myapp.config', [])
+    module('myapp.config', [])
 
-  .run(['$ionicPlatform', ($ip) => {
-    $ip.ready(function() {
-      if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
-        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-        cordova.plugins.Keyboard.disableScroll(true);
+      .run(['$ionicPlatform', ($ip) => {
+        $ip.ready(function() {
+          if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
+            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+            cordova.plugins.Keyboard.disableScroll(true);
 
-      }
-      if (window.StatusBar) {
+          }
+          if (window.StatusBar) {
 
-        StatusBar.styleDefault();
-      }
-    });
-  }])
+            StatusBar.styleDefault();
+          }
+        });
+      }])
 
-  .config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
-    $stateProvider
+      .config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
+        $stateProvider
 
-    .state('dash', {
-      url: '/dash',
-      abstract: true,
-      views: {
-        'root': {
-          templateUrl: 'templates/menu.html',
-          controller: 'AppCtrl'
-        }
-      }
-    })
+        .state('dash', {
+          url: '/dash',
+          abstract: true,
+          views: {
+            'root': {
+              templateUrl: 'templates/menu.html',
+              controller: 'AppCtrl'
+            }
+          }
+        })
 
-    .state('dash.news', {
-      url: '/news',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/news-list.html',
-          controller: 'NewsListCtrl'
-        }
-      }
-    })
+        .state('dash.news', {
+          url: '/news',
+          views: {
+            'menuContent': {
+              templateUrl: 'templates/news-list.html',
+              controller: 'NewsListCtrl'
+            }
+          }
+        })
 
-    .state('dash.news-item', {
-      url: '/news/:singleNewsId',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/news-item.html',
-          controller: 'NewsItemCtrl'
-        }
-      }
-    })
-    ;
+        .state('dash.news-item', {
+          url: '/news/:singleNewsId',
+          views: {
+            'menuContent': {
+              templateUrl: 'templates/news-item.html',
+              controller: 'NewsItemCtrl'
+            }
+          }
+        })
+        ;
 
-    $urlRouterProvider.otherwise('/dash/news');
-  }]);
+        $urlRouterProvider.otherwise('/dash/news');
+      }]);
 
 })(angular);

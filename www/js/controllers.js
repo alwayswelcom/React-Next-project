@@ -6,13 +6,8 @@
   .controller('AppCtrl', ['$scope', function ($scope) {
 
   }])
-  .controller('NewsListCtrl', ['$scope', '$http', function ($scope, $http){
-    $http.get('http://behkamal.ir/newsList.json').then(function(resp){
-      $scope.news = resp.data;
-      console.log(resp.data);
-    }, function(err){
-      console.log('ERR', err);
-    });
+  .controller('NewsListCtrl', ['$scope', 'newsItems', function ($scope , newsItems){
+    $scope.news = newsItems.all();
   }])
   .controller('NewsItemCtrl', ['$scope', 'newsItems', '$stateParams', function ($scope , newsItems, $stateParams){
     $scope.singleNews = newsItems.get($stateParams.singleNewsId);
